@@ -22,7 +22,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jnurmine/Zenburn'
 Plug 'flazz/vim-colorschemes'
-
+Plug 'morhetz/gruvbox'
 " best auto complete tool I have ever used(jedi, supertab...)
 Plug 'Valloric/YouCompleteMe', {'tag': 'e018777'}
 
@@ -219,7 +219,8 @@ let g:NERDTreeIndicatorMapCustom = {
 " for airline
 " 使用powerline打过补丁的字体
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dark_minimal'
+let g:airline_theme='solarized'
+
 " 开启tabline
 let g:airline#extensions#tabline#enabled = 1
 " 显示buffer编号
@@ -236,12 +237,7 @@ let g:airline#extensions#tabline#left_alt_sep = '💦'
 
 " color scheme
 set background=dark        " Assume a dark background
-if has('gui_running')
-    colorscheme solarized
-else
-    colorscheme molokai
-endif
-set t_Co=256
+colorscheme solarized
 
 " 自定义代码折叠，折叠（和取消折叠）
 set foldmethod=syntax
